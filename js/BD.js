@@ -34,7 +34,7 @@ let JsonInicio = {
     Contenido:[
         {
             pregunta:"¿Que hago?",
-            respuesta:"En todo este tiempo  eh adquirido habilidades en : <ul><li><span class='nomHablidadGeneral'>Frond-End</span> <span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.frondEnd+"'></span></span></li><li> <span class='nomHablidadGeneral'>Back-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.backEnd+"'></span></span></li><li><span class='nomHablidadGeneral'> Android(Java)</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.android+"'></span></span></li><li><span class='nomHablidadGeneral'> Desktop(VB .NET) </span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.descktop+"'></span></span></li></ul>"
+            respuesta:"En todo este tiempo  eh adquirido habilidades en : <ul><li><span class='nomHablidadGeneral'>Frond-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.frondEnd+"'></span></span></li><li> <span class='nomHablidadGeneral'>Back-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.backEnd+"'></span></span></li><li><span class='nomHablidadGeneral'> Android(Java)</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.android+"'></span></span></li><li><span class='nomHablidadGeneral'> Desktop(VB .NET) </span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.descktop+"'></span></span></li></ul>"
         },
         {
             pregunta:"¿Donde estoy?",
@@ -82,7 +82,7 @@ let JsonCapturasPortafolio = {
         {urlCaptura:urlCapturasAcademicos+"SAT.PNG",Descripcion:"SAT , es  un sistema web de asignación de tareas en el que un supervisor puede asignarle tareas diarias a un empleado.  Este fue un proyecto desarrollado con java web y sql server."},
         {urlCaptura:urlCapturasAcademicos+"SRD.png",Descripcion:"SRD , es  un app android  para registrar datos y luego procesarlos de ambientes de edificios  , luego procesarlos y analizarlos . Este proyecto fue desarrollado con java en android , java web y SQL server."},
         {urlCaptura:urlCapturasAcademicos+"frank-pe.png",Descripcion:"Mi sitio web personal, muestro información de contacto y sobre mis aportes. Las tecnologías que uso son PHP,CSS3,HTML5,JavaScript , Jquery y la base de datos  MySQL."},
-        {urlCaptura:urlCapturasAcademicos+"gestorDePedidos.png",Descripcion:"SGP, es un  proyecto de fin de curso (DAA) consiste en un sistema web cuyas funcionalidades consisten en registrar , modificar, eliminar y buscar pedidos. las tecnologías que uso son JAVA WEB (JSP ,SERVLETS),CSS3,HTML5,JavaScript, JQuery AJAX y la base de datos ORACLE 11g."}
+        {urlCaptura:urlCapturasAcademicos+"gestorDePedidos.png",Descripcion:"SGP, es un  proyecto de DAA consiste en un sistema web cuyas funcionalidades consisten en registrar , modificar, eliminar y buscar pedidos. las tecnologías que uso son JAVA WEB (JSP ,SERVLETS),CSS3,HTML5,JavaScript, JQuery AJAX y  ORACLE 11g."}
     ]
 
 }
