@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded',function(){
     llenaContenido(JsonInicio)
 })
 function mover(){
-    for(i=0; i< lstItemsMenu.length; i++ ){
+    for( let i=0; i< lstItemsMenu.length; i++ ){
         lstItemsMenu[i].addEventListener('click',function(){
             let altoFirst  = lstItemsMenu[0].style.marginTop
             let Objt = DevuelveAltoAndPosicion(this)
@@ -185,7 +185,7 @@ function showMenu(){
         estadoActivoMenu = false
         contMenuUl[0].style.marginLeft="-100%"
         setTimeout(function(){
-            for(i = 0 ; i < barrasCortina.length ; i++){
+            for(let i = 0 ; i < barrasCortina.length ; i++){
                 barrasCortina[i].style.width = "100%"
             }
         },500)
@@ -195,7 +195,7 @@ function showMenu(){
 
 function DevuelvePosicion( nodeList , elementoABuscar){
         let Tamanio = nodeList.length
-        for(i =0  ; i < Tamanio; i++){
+        for(let i =0  ; i < Tamanio; i++){
             if(nodeList[i] == elementoABuscar){
                 return i;
             }
@@ -206,7 +206,7 @@ function DevuelveAltoAndPosicion(item){
     let indice = DevuelvePosicion(lstItemsMenu,item)
     let Alto = 0 ;
     if(indice > 0){
-        for( i = indice ;  i > 0 ; i-- ){
+        for( let i = indice ;  i > 0 ; i-- ){
             Alto += lstcontenedoreImagenes[indice].clientHeight 
         }
     }else {
@@ -224,13 +224,13 @@ function llenaContenido(Json){
         CreaNodosParaContenido(Json)
     setTimeout(function(){
         let Elementos = document.getElementsByClassName("contenedor-pregunta")
-        for(x = 0 ; x < Elementos.length;x++){
+        for( let x = 0 ; x < Elementos.length;x++){
             Elementos[x].style.marginLeft = "0"
         }
     }, 300)
 }
 function CreaNodosParaContenido(json){
-    for(i = 0 ; i < json.Contenido.length; i ++){
+    for(let i = 0 ; i < json.Contenido.length; i ++){
         let Pregunta = document.createElement("h2")
         let Respuesta = document.createElement("p")
         let Contenedor = document.createElement("div")
