@@ -167,7 +167,7 @@ function showMenu(){
         contMenuUl[0].style.marginLeft="0%"       
         estadoActivoMenu = true
         setTimeout(function(){
-            for(i = 0 ; i < barrasCortina.length ; i++){
+            for( let i = 0 ; i < barrasCortina.length ; i++){
                 barrasCortina[i].style.width = "0%"
             }
         },500)
