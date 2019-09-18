@@ -105,7 +105,7 @@ function ItemParalistaDeHabilidades(LP){
 }
 function retornaItemsPortafolio(arreglo){
     let items =""
-    for(i =0 ; i<arreglo.length;i++){
+    for( let i =0 ; i<arreglo.length;i++){
         items +="<div class='Captura'> <img src='"+arreglo[i].urlCaptura+"'><span>"+arreglo[i].Descripcion+"</span> </div> " 
        
     }
