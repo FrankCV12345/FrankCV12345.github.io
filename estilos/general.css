@@ -77,6 +77,10 @@ html , body {
     width: 80px;
     display: inline-block;
 }
+.nomHablidadGeneral{
+    width: 160px;
+    display: inline-block;
+}
 .contenedorItemsPortafolio{
     /*border: solid 1px red;*/
     width: 100%;
