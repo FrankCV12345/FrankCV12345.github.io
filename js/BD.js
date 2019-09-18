@@ -34,7 +34,7 @@ let JsonInicio = {
     Contenido:[
         {
             pregunta:"¿Que hago?",
-            respuesta:"En todo este tiempo  eh adquirido habilidades en : <ul><li>Frond-End &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.frondEnd+"'></span></span></li><li>Back-End &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.backEnd+"'></span></span></li><li>Android(Java) &nbsp;&nbsp;&nbsp;<span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.android+"'></span></span></li><li>Desktop(VB .NET) <span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.descktop+"'></span></span></li></ul>"
+            respuesta:"En todo este tiempo  eh adquirido habilidades en : <ul><li><span class='nomHablidad'>Frond-End</span> <span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.frondEnd+"'></span></span></li><li> <span class='nomHablidad'>Back-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.backEnd+"'></span></span></li><li><span class='nomHablidad'> Android(Java)</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.android+"'></span></span></li><li>Desktop(VB .NET) <span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.descktop+"'></span></span></li></ul>"
         },
         {
             pregunta:"¿Donde estoy?",
