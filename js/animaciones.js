@@ -1,5 +1,4 @@
-import { JsonSobreMi,JsonInicio,JsonAportes,JsonContacto,JsonPortaFolio } from './BD.js'
-//import { cube, foo, graph } from 'BD';
+//import { JsonSobreMi,JsonInicio,JsonAportes,JsonContacto,JsonPortaFolio } from './BD.js'
 let  iconbarras = document.getElementById("iconBarras")
 let  lineasDentrodeiconBarras = iconbarras.children
 let contMenu  = document.getElementById("contMenu")
@@ -10,10 +9,9 @@ let lstItemsMenu = document.getElementsByClassName("textoItemMenu")
 let contenido = document.getElementsByClassName("children")
 let estadoActivoMenu = false; 
 let CantidadClicksElemento = 1 ;
-/*const urlCapturasTrabajo = "./imagenes/capturas-portafolio/trabajo/"
-const urlCapturasAcademicos = "./imagenes/capturas-portafolio/academico/"*/
+const urlCapturasTrabajo = "./imagenes/capturas-portafolio/trabajo/"
+const urlCapturasAcademicos = "./imagenes/capturas-portafolio/academico/"
 
-/*
 let hablidaddes = {
     generales:{frondEnd: 45,backEnd:50,android:37,descktop:35},
     detallado:{java:40,php:40,vb:30,js:50,html:50,css:50,mySql:50,sqlServer:40,NET:30,laravel:40,jQuery:40,git:30,VueJs:40,linux:30,Android:35,bootstrap:50,Vuetify:40}
@@ -47,7 +45,7 @@ let JsonInicio = {
     Contenido:[
         {
             pregunta:"¿Que hago?",
-            respuesta:"En todo este tiempo  eh adquirido habilidades en : <ul><li>Frond-End &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.frondEnd+"'></span></span></li><li>Back-End &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.backEnd+"'></span></span></li><li>Android(Java) &nbsp;&nbsp;&nbsp;<span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.android+"'></span></span></li><li>Desktop(VB .NET) <span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.descktop+"'></span></span></li></ul>"
+            respuesta:"En todo este tiempo  eh adquirido habilidades en : <ul><li><span class='nomHablidadGeneral'>Frond-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.frondEnd+"'></span></span></li><li> <span class='nomHablidadGeneral'>Back-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.backEnd+"'></span></span></li><li><span class='nomHablidadGeneral'> Android(Java)</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.android+"'></span></span></li><li><span class='nomHablidadGeneral'> Desktop(VB .NET) </span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.descktop+"'></span></span></li></ul>"
         },
         {
             pregunta:"¿Donde estoy?",
@@ -56,19 +54,19 @@ let JsonInicio = {
     ]
 }
 let JsonAportes ={
-    titulo:"Redes",
+    titulo:"Estudios",
     Contenido:[
         {
-            pregunta:"Linkedin : ",
-            respuesta:"<a href='https://www.linkedin.com/in/frankli-yoan-campos-vilchez/'> ir  --></a>"
+            pregunta:"IDAT",
+            respuesta:"<ul><li>Informatica</li></ul>"
         },
         {
-            pregunta:"Intagram : ",
-            respuesta:"<a href='https://www.instagram.com/frankcamv/'> ir  --></a>"
+            pregunta:"Udemy",
+            respuesta:"<ul><li>VueJS + Vuetify </li><li>Laravel</li><li>Android</li></ul>"
         },
         {
-            pregunta:"Facebook : ",
-            respuesta:"<a href='https://www.facebook.com/frank12345687'> ir  --></a>"
+            pregunta:"CEPS UNI",
+            respuesta:" <ul><li>AutoCAD I</li><li>AutoCAD II</li><li>AutoCAD III</li></ul>"
         }
 
     ]
@@ -111,7 +109,7 @@ let JsonPortaFolio = {
             respuesta:"<div class='contenedorItemsPortafolio'> "+retornaItemsPortafolio(JsonCapturasPortafolio.academicos)+"</div>"
         }
     ]
-}*/
+}
 iconbarras.addEventListener("click",showMenu)
 window.addEventListener('DOMContentLoaded',function(){
     mover()
@@ -168,10 +166,14 @@ function showMenu(){
         estadoActivoMenu = true
         setTimeout(function(){
             for( let i = 0 ; i < barrasCortina.length ; i++){
-                barrasCortina[i].style.width = "0%"
+                let tiempo =(i%2) == 1 ? i*50:i*100
+                setTimeout(function(){
+                    barrasCortina[i].style.width = "0%"
+                },tiempo )
+                
             }
         },500)
-        
+        console.log("Abriendo")
     }else{
         
         lineasDentrodeiconBarras[0].style.transform = "rotate(0deg)"
@@ -183,12 +185,15 @@ function showMenu(){
         contMenu.style.width = "100px"
         contMenu.style.backgroundColor ="transparent"
         estadoActivoMenu = false
-        contMenuUl[0].style.marginLeft="-100%"
+        contMenuUl[0].style.marginLeft="-110%"
         setTimeout(function(){
             for(let i = 0 ; i < barrasCortina.length ; i++){
+                
                 barrasCortina[i].style.width = "100%"
+                
             }
         },500)
+        console.log("cerrando")
         
     }
 }
@@ -248,14 +253,14 @@ function CreaNodosParaContenido(json){
             Contenedor.appendChild(Respuesta)
             
             contenido[1].appendChild(Contenedor)
-            if(json == JsonPortaFolio){
+            if(json == JsonPortaFolio || json == JsonSobreMi){
                 contenido[1].style.display ="block"
             }else{
                 contenido[1].style.display ="flex"
             }
     }  
 }
-/*
+
 function ItemParalistaDeHabilidades(LP){
     return "<li><span class='nomHablidad'>"+LP.toUpperCase()+"</span> <span class='cont-med-habilidad'><span style='width:"+hablidaddes.detallado[LP]+"'></span></span></li>" 
 }
@@ -266,4 +271,4 @@ function retornaItemsPortafolio(arreglo){
        
     }
     return items
-}*/
+}
