@@ -255,7 +255,7 @@ function CreaNodosParaContenido(json){
             Contenedor.appendChild(Respuesta)
             
             contenido[1].appendChild(Contenedor)
-            if(json == JsonPortaFolio || json == JsonSobreMi){
+            if(json == JsonPortaFolio || json == JsonSobreMi || json== JsonInicio){
                 contenido[1].style.display ="block"
             }else{
                 contenido[1].style.display ="flex"
