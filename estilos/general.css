@@ -41,7 +41,7 @@ html , body {
 }
 .first{
     margin-left: 100px;
-    border-radius: 4px;
+    
 }
 .envol-img img {
     width: 100%;
@@ -92,7 +92,9 @@ html , body {
     padding: 10px
 }
 .Captura img {
-    width: 100%;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
 }
 .Captura span{
     display: inline-block;
@@ -107,5 +109,9 @@ html , body {
     }
     .secont{
         width: 100%;
+    }
+    .Captura img{
+        width: 100%;
+
     }
  }
