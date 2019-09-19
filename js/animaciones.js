@@ -50,6 +50,10 @@ let JsonInicio = {
             respuesta:"He adquirido habilidades en : <ul><li><span class='nomHablidadGeneral'>Frond-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.frondEnd+"'></span></span></li><li> <span class='nomHablidadGeneral'>Back-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.backEnd+"'></span></span></li><li><span class='nomHablidadGeneral'> Android(Java)</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.android+"'></span></span></li><li><span class='nomHablidadGeneral'> Desktop(VB .NET) </span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.descktop+"'></span></span></li></ul>"
         },
         {
+            pregunta:"5 cosas sobre mi : ",
+            respuesta:"<ol><li>Tengo facilidad para el autoaprendizaje.</li> <li>Me comprometo con mi trabajo.</li><li>Creo que todos podemos aprender.</li><li> Me gusta jugar con JS y Html.</li><li>Siempre estoy aprendiendo algo nuevo.</li></ol>"
+        },
+        {
             pregunta:"¿Dónde estoy?",
             respuesta:"A la fecha 16/09/2019, estoy participando en la comunidad de <a href='https://www.facebook.com/HackSpacePeru' target='_blank'>Hack space</a>, Aprendiendo .NET framework y un poco de Data Science."
         }
