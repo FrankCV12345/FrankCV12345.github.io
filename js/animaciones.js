@@ -233,6 +233,7 @@ function llenaContenido(Json){
         }
     }
         CreaNodosParaContenido(Json)
+        contenido[1].scrollTop = 0
     setTimeout(function(){
         let Elementos = document.getElementsByClassName("contenedor-pregunta")
         for( let x = 0 ; x < Elementos.length;x++){
