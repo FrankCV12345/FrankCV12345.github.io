@@ -55,7 +55,8 @@ let JsonInicio = {
         },
         {
             pregunta:"¿Dónde estoy?",
-            respuesta:"A la fecha 16/09/2019, estoy participando en la comunidad de <a href='https://www.facebook.com/HackSpacePeru' target='_blank'>Hack space</a>, Aprendiendo .NET framework y un poco de Data Science."
+            respuesta:"A la fecha 25/10/2019, estoy trabajando en el mantenimiento del sistema OBSERVATORIO DE PRECIOS DE MECICAMENTOS  para DIGEMID ( dependencia del Ministerio de Salud ). "
+            //respuesta:"A la fecha 16/09/2019, estoy participando en la comunidad de <a href='https://www.facebook.com/HackSpacePeru' target='_blank'>Hack space</a>, Aprendiendo .NET framework y un poco de Data Science."
         }
     ]
 }
