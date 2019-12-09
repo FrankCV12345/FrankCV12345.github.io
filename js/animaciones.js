@@ -28,7 +28,7 @@ let JsonSobreMi = {
         },
         {
             pregunta:"¿Mi leguaje favorito?",
-            respuesta:"No lo tengo , hasta ahora todo lo que probé  tiene sus ventajas y desventajas pero considero que toda tecnología tiene su utilidad en el momento adecuado.</br>Aunque de ves en cuando me gusta jugar en el FrondEnd , desarrollé esta pagina con Html,CSS y JS( me gusta probarme que aun no pierdo mi toque ;) )"
+            respuesta:"No lo tengo , hasta ahora todo lo que probé  tiene sus ventajas y desventajas pero considero que toda tecnología tiene su utilidad en el momento adecuado.</br>Aunque de ves en cuando me gusta jugar en el FrondEnd ."
         },
         {
             pregunta:"Mis habilidades Técnicas",
@@ -44,10 +44,10 @@ let JsonInicio = {
     Contenido:[
         {
             pregunta:"Franklin yoan campos vilchez ",
-            respuesta:"Programador Junior."
+            respuesta:"Desarrollador Web, Android y Descktop"
         },{
             pregunta:"¿Que hago?",
-            respuesta:"He adquirido habilidades en : <ul><li><span class='nomHablidadGeneral'>Frond-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.frondEnd+"'></span></span></li><li> <span class='nomHablidadGeneral'>Back-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.backEnd+"'></span></span></li><li><span class='nomHablidadGeneral'> Android(Java)</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.android+"'></span></span></li><li><span class='nomHablidadGeneral'> Desktop(VB .NET) </span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.descktop+"'></span></span></li></ul>"
+            respuesta:"He adquirido habilidades en : <ul><li><span class='nomHablidadGeneral'>Frond-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.frondEnd+"%'></span></span></li><li> <span class='nomHablidadGeneral'>Back-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.backEnd+"%'></span></span></li><li><span class='nomHablidadGeneral'> Android(Java)</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.android+"%'></span></span></li><li><span class='nomHablidadGeneral'> Desktop(VB .NET) </span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.descktop+"%'></span></span></li></ul>"
         },
         {
             pregunta:"5 cosas sobre mi : ",
@@ -270,7 +270,7 @@ function CreaNodosParaContenido(json){
 }
 
 function ItemParalistaDeHabilidades(LP){
-    return "<li><span class='nomHablidad'>"+LP.toUpperCase()+"</span> <span class='cont-med-habilidad'><span style='width:"+hablidaddes.detallado[LP]+"'></span></span></li>" 
+    return "<li><span class='nomHablidad'>"+LP.toUpperCase()+"</span> <span class='cont-med-habilidad'><span style='width:"+hablidaddes.detallado[LP]+"%'></span></span></li>" 
 }
 function retornaItemsPortafolio(arreglo){
     let items =""
