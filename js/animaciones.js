@@ -43,7 +43,7 @@ let JsonInicio = {
     titulo:"Inicio",
     Contenido:[
         {
-            pregunta:"Franklin yoan campos vilchez ",
+            pregunta:"Franklin Yoan Campos Vilchez ",
             respuesta:"Desarrollador Web, Android y Desktop"
         },{
             pregunta:"¿Que hago?",
