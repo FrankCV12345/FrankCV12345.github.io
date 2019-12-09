@@ -44,7 +44,7 @@ let JsonInicio = {
     Contenido:[
         {
             pregunta:"Franklin yoan campos vilchez ",
-            respuesta:"Desarrollador Web, Android y Descktop"
+            respuesta:"Desarrollador Web, Android y Desktop"
         },{
             pregunta:"¿Que hago?",
             respuesta:"He adquirido habilidades en : <ul><li><span class='nomHablidadGeneral'>Frond-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.frondEnd+"%'></span></span></li><li> <span class='nomHablidadGeneral'>Back-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.backEnd+"%'></span></span></li><li><span class='nomHablidadGeneral'> Android(Java)</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.android+"%'></span></span></li><li><span class='nomHablidadGeneral'> Desktop(VB .NET) </span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.descktop+"%'></span></span></li></ul>"
