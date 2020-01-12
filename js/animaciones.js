@@ -13,7 +13,7 @@ const urlCapturasAcademicos = "./imagenes/capturas-portafolio/academico/"
 
 let hablidaddes = {
     generales:{frondEnd: 45,backEnd:50,android:37,descktop:35},
-    detallado:{java:40,php:40,vb:30,js:50,html:50,css:50,mySql:50,sqlServer:40,NET:30,laravel:40,jQuery:40,git:30,VueJs:40,linux:30,Android:35,bootstrap:50,Vuetify:40}
+    detallado:{java:40,php:40,vb:30,js:50,html:50,css:50,mySql:50,sqlServer:40,NET:30,laravel:40,jQuery:40,git:30,VueJs:40,linux:30,Android:35,bootstrap:50,Vuetify:40,Spring:30,Dart:10,Flutter:10}
 }
 let JsonSobreMi = {
     titulo:"Sobre mi",
@@ -32,10 +32,10 @@ let JsonSobreMi = {
         },
         {
             pregunta:"Mis habilidades Técnicas",
-            respuesta:"<ul>"+ItemParalistaDeHabilidades("java")+ItemParalistaDeHabilidades("php") +ItemParalistaDeHabilidades("vb")+ItemParalistaDeHabilidades("js")+ItemParalistaDeHabilidades("html")+
+            respuesta:"<ul>"+ItemParalistaDeHabilidades("java")+ItemParalistaDeHabilidades("Spring")+ItemParalistaDeHabilidades("php") +ItemParalistaDeHabilidades("vb")+ItemParalistaDeHabilidades("js")+ItemParalistaDeHabilidades("html")+
             ItemParalistaDeHabilidades("css")+ItemParalistaDeHabilidades("mySql")+ItemParalistaDeHabilidades("sqlServer")+ItemParalistaDeHabilidades("NET")+ItemParalistaDeHabilidades("laravel")+ItemParalistaDeHabilidades("jQuery")+
             ItemParalistaDeHabilidades("git")+ItemParalistaDeHabilidades("VueJs")+ItemParalistaDeHabilidades("linux")+ItemParalistaDeHabilidades("Android")
-            +ItemParalistaDeHabilidades("bootstrap")+ItemParalistaDeHabilidades("Vuetify")+"</ul>"
+            +ItemParalistaDeHabilidades("bootstrap")+ItemParalistaDeHabilidades("Vuetify")+ItemParalistaDeHabilidades("Dart")+ItemParalistaDeHabilidades("Flutter")+"</ul>"
         }
     ]
 }
@@ -69,7 +69,7 @@ let JsonEstudios ={
         },
         {
             pregunta:"Udemy",
-            respuesta:"<ul><li>VueJS + Vuetify </li><li>Laravel</li><li>Android (JAVA)</li></ul>"
+            respuesta:"<ul><li>VueJS + Vuetify </li><li>Laravel</li><li>Android (JAVA)</li><li>Flutter (Introducción)</li></ul>"
         },
         {
             pregunta:"CEPS UNI",
@@ -90,7 +90,7 @@ let JsonContacto = {
 let JsonCapturasPortafolio = {
     trabajos:
     [
-        {urlCaptura:urlCapturasTrabajo+"medicamentos-esenciales.png",Descripcion:"Aplicativo para Medicamentos Esenciales Este es un aplicativo web desarrollado en .NET( C# ) con JQuery , este fue desarrollado en respuesta a la Resolución Ministerial N° 1097-2019-MINSA, El objetivo de este aplicativo es identificar las farmacias o boticas privadas que tienen estos medicamentos, se pueden aplicar algunos filtros por Departamento, provincia o distrito."},
+        {urlCaptura:urlCapturasTrabajo+"medicamentos-esenciales.png",Descripcion:"<b>Aplicativo para Medicamentos Esenciales</b> Este es un aplicativo web desarrollado en .NET( C# ) con JQuery , este fue desarrollado en respuesta a la Resolución Ministerial N° 1097-2019-MINSA, El objetivo de este aplicativo es identificar las farmacias o boticas privadas que tienen estos medicamentos, se pueden aplicar algunos filtros por Departamento, provincia o distrito."},
         {urlCaptura:urlCapturasTrabajo+"capturavistacontrolFER.jpg",Descripcion:"<b>App de control para Robot</b>, este fue un  proyecto de un app android y una serie de aplicaciones de escritorio las cuales en conjunto sirven para la transmisión de audio y video  para la pc del robot , además de esto el App envía órdenes de movimiento a la pc y la pc al arduino . Las tecnologías que use fue java desktop , java en android, php(para hacer un login) <a href='https://drive.google.com/open?id=115PAVWLudRaWyW-tye8C0_w7t7jlM9NO' target='_blank'>Video demo</a>."},
         {urlCaptura:urlCapturasTrabajo+"captura-lista-cotizaciones-Plataformapraco.png",Descripcion:"<b>Plataforma praco</b> es un sistema web en el cual se puede generar cotizaciones , ordenes de compra  y cartas  de garantía para producto. Este fue desarrollado con laravel 5.5 y VueJS en este caso yo me encargue del API Rest y de darle mantenimiento al FrontEnd."},
         {urlCaptura:urlCapturasTrabajo+"STACK-MANAGER.PNG",Descripcion:"<b>PICK </b>, es un sistema desktop que sirve para tratar archivos CSV los cuales luego serán usados para hacer circuitos impresos, este proyecto está desarrollado en VB sobre el framework .NET."},
@@ -181,7 +181,6 @@ function showMenu(){
                 
             }
         },500)
-        console.log("Abriendo")
     }else{
         
         lineasDentrodeiconBarras[0].style.transform = "rotate(0deg)"
@@ -201,7 +200,6 @@ function showMenu(){
                 
             }
         },500)
-        console.log("cerrando")
         
     }
 }
