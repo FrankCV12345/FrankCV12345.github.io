@@ -103,7 +103,15 @@ html , body {
     /*border: solid 1px blue;*/
     text-align: justify;
 }
+/* grafico radar*/
+.contenedor-radar{
+    width: 60%;
+    margin: auto;
+}
 @media only screen and (max-width: 768px) {
+    .contenedor-radar{
+        width: 100%;
+    }
     .first{
         display: none;
     }

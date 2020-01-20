@@ -11,10 +11,44 @@ let CantidadClicksElemento = 1 ;
 const urlCapturasTrabajo = "./imagenes/capturas-portafolio/trabajo/"
 const urlCapturasAcademicos = "./imagenes/capturas-portafolio/academico/"
 
+
+
+
 let hablidaddes = {
-    generales:{frondEnd: 45,backEnd:50,android:37,descktop:35},
-    detallado:{java:40,php:40,vb:30,js:50,html:50,css:50,mySql:50,sqlServer:40,NET:30,laravel:40,jQuery:40,git:30,VueJs:40,linux:30,Android:35,bootstrap:50,Vuetify:40,Spring:30,Dart:10,Flutter:10}
+    generales:{frondEnd: 47,backEnd:55,android:40,descktop:35., ia:5,sql:38, analsis:35},
+    detallado:{java:42,php:40,vb:30,js:50,html:50,css:50,mySql:50,sqlServer:40,NET:35,laravel:40,jQuery:40,git:30,VueJs:40,linux:30,Android:35,bootstrap:50,Vuetify:40,Spring:30,Dart:10,Flutter:10}
 }
+/*Habilidades parametros para grafico radar*/
+let ctx 
+let  data = {
+            labels: ['BackEnd', 'FrondEnd', 'IA', 'Desktop','Android','SQL'],
+            datasets: [{
+                data: [hablidaddes.generales.backEnd,hablidaddes.generales.frondEnd, hablidaddes.generales.ia,hablidaddes.generales.descktop
+                    , hablidaddes.generales.android,hablidaddes.generales.sql],
+                radius: 5,
+                backgroundColor:['rgba(26, 115, 232, 0.4)','rgba(0, 77, 64, 6)','rgba(62, 39, 35, 0.6)','rgba(33, 33, 33, 0.6)','rgba(198, 40, 40, 0.6)'],
+                label:'Mis Habilidades',
+                borderColor:['#000']
+            }]
+        }
+var chartOptions = {
+                
+                scale: {
+                    responsive: true,
+                    ticks: {
+                    beginAtZero: true,
+                    min: 0,
+                    max: 100,
+                    stepSize: 20
+                    },
+                    pointLabels: {
+                       fontSize: 12
+                    }
+                }
+            };
+/**/
+
+
 let JsonSobreMi = {
     titulo:"Sobre mi",
     Contenido:[
@@ -39,6 +73,7 @@ let JsonSobreMi = {
         }
     ]
 }
+/*<ul><li><span class='nomHablidadGeneral'>Frond-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.frondEnd+"%'></span></span></li><li> <span class='nomHablidadGeneral'>Back-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.backEnd+"%'></span></span></li><li><span class='nomHablidadGeneral'> Android(Java)</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.android+"%'></span></span></li><li><span class='nomHablidadGeneral'> Desktop(VB .NET) </span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.descktop+"%'></span></span></li></ul> */
 let JsonInicio = {
     titulo:"Inicio",
     Contenido:[
@@ -47,7 +82,7 @@ let JsonInicio = {
             respuesta:"Desarrollador Web, Android y Desktop"
         },{
             pregunta:"¿Que hago?",
-            respuesta:"He adquirido habilidades en : <ul><li><span class='nomHablidadGeneral'>Frond-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.frondEnd+"%'></span></span></li><li> <span class='nomHablidadGeneral'>Back-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.backEnd+"%'></span></span></li><li><span class='nomHablidadGeneral'> Android(Java)</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.android+"%'></span></span></li><li><span class='nomHablidadGeneral'> Desktop(VB .NET) </span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.descktop+"%'></span></span></li></ul>"
+            respuesta:"He adquirido habilidades en :  <div class='contenedor-radar' > <canvas width='400' height='500'  id='chartRadar'></canvas></div>"
         },
         {
             pregunta:"5 cosas sobre mi : ",
@@ -120,10 +155,15 @@ let JsonPortaFolio = {
     ]
 }
 iconbarras.addEventListener("click",showMenu)
+
 window.addEventListener('DOMContentLoaded',function(){
     mover()
     llenaContenido(JsonInicio)
+   
 })
+
+
+
 function mover(){
     for( let i=0; i< lstItemsMenu.length; i++ ){
         lstItemsMenu[i].addEventListener('click',function(){
@@ -205,6 +245,7 @@ function showMenu(){
     }
 }
 
+
 function DevuelvePosicion( nodeList , elementoABuscar){
         let Tamanio = nodeList.length
         for(let i =0  ; i < Tamanio; i++){
@@ -227,22 +268,28 @@ function DevuelveAltoAndPosicion(item){
     return {Alto :Alto,Indice:indice}
 }
 function llenaContenido(Json){
+    
     if(contenido[1].hasChildNodes()){
         while(contenido[1].childNodes.length >=1)
         {
             contenido[1].removeChild(contenido[1].firstChild)
         }
     }
+        //creo nodos para llenar el contenido 
         CreaNodosParaContenido(Json)
+        //muevo el scroll para que se ponga al inicio de la pagina 
         contenido[1].scrollTop = 0
+        // muevo los contenedores de pregunta/respuesta para que se muestren con una transicion
     setTimeout(function(){
         let Elementos = document.getElementsByClassName("contenedor-pregunta")
         for( let x = 0 ; x < Elementos.length;x++){
             Elementos[x].style.marginLeft = "0"
         }
     }, 300)
+
 }
 function CreaNodosParaContenido(json){
+
     for(let i = 0 ; i < json.Contenido.length; i ++){
         let Pregunta = document.createElement("h2")
         let Respuesta = document.createElement("p")
@@ -261,12 +308,24 @@ function CreaNodosParaContenido(json){
             Contenedor.appendChild(Respuesta)
             
             contenido[1].appendChild(Contenedor)
-            if(json == JsonPortaFolio || json == JsonSobreMi || json== JsonInicio){
-                contenido[1].style.display ="block"
-            }else{
-                contenido[1].style.display ="flex"
-            }
-    }  
+            
+    }
+
+    if(json == JsonPortaFolio || json == JsonSobreMi || json== JsonInicio){
+        contenido[1].style.display ="block"
+        if(json == JsonInicio){
+            ctx = document.getElementById("chartRadar").getContext("2d")
+
+            let myChart= new Chart(ctx,{
+                type:"radar",
+                data:data,
+                options: chartOptions 
+            });
+        }
+    }else{
+        contenido[1].style.display ="flex"
+    }
+      
 }
 
 function ItemParalistaDeHabilidades(LP){
