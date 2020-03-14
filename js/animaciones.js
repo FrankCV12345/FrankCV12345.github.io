@@ -105,7 +105,7 @@ let JsonEstudios ={
         },
         {
             pregunta:"Udemy",
-            respuesta:"<ul><li>VueJS + Vuetify </li><li>Laravel</li><li>Android (JAVA)</li><li>Flutter (Introducción)</li></ul>"
+            respuesta:"<ul><li>Spring Boot</li><li>VueJS + Vuetify </li><li>Laravel</li><li>Android (JAVA)</li><li>Flutter (Introducción)</li></ul>"
         },
         {
             pregunta:"CEPS UNI",
