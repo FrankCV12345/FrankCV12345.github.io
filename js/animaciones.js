@@ -16,7 +16,7 @@ const urlCapturasAcademicos = "./imagenes/capturas-portafolio/academico/"
 
 let hablidaddes = {
     generales:{frondEnd: 47,backEnd:65,android:40,descktop:35., ia:5,sql:40},
-    detallado:{java:52,php:40,vb:30,js:50,html:50,css:50,mySql:50,sqlServer:40,NET:35,laravel:40,jQuery:40,git:30,VueJs:40,linux:30,Android:35,bootstrap:50,Vuetify:40,Spring:30,Dart:10,Flutter:10}
+    detallado:{java:52,php:40,vb:30,js:50,html:50,css:50,mySql:50,sqlServer:40,NET:35,laravel:40,jQuery:40,git:30,VueJs:40,linux:30,Android:35,bootstrap:50,Vuetify:40,Spring:40,Dart:10,Flutter:10}
 }
 /*Habilidades parametros para grafico radar*/
 let ctx 
