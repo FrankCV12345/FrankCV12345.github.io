@@ -1,68 +1,52 @@
-.logo{
-    width: 35px;
-    height: 15px;
-    margin-top: 20px;
-    margin-left: 20px;
-    position: absolute;
-}
-.logo:hover{
-    cursor: pointer;
-}
-.line{
-    height: 2px;
-    width: 100%;
-    background-color: black;
-    transition: all 0.5s;
-    position: absolute;
-    -webkit-box-shadow: 4px 4px 9px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 4px 4px 9px 0px rgba(0,0,0,0.5);
-    box-shadow: 4px 4px 9px 0px rgba(0,0,0,0.5);
-}
-.lineOne{
-    top: 2px;
-}
-.lineTwo{
-    top: 6px;
-}
-.menu{
-    background-color :transparent;
-    height: 100%;
-    width: 100px;
+
+#menusito{
+    background-color: white;
+    z-index: 10;
     position: fixed;
-    transition: all 0.5s;
+    width: 100%;
+    height: 5%;
+    bottom: 0;
+    box-shadow: 0 0 2px rgba(0,0,0,0.16);
 }
-.menu:hover{
-    cursor: pointer;
-}
-.menuCont{
-    position: absolute;
-    top: 20px;
-    margin-left: -110%;
+#menusito ul {
+    background-color:white;
     list-style: none;
-    padding: 10px;
+    display: inline-block;
     width: 100%;
-    max-width: 100px;
-    transition: all 0.5s;
+    height: 100%;
+    padding: 0;
+    margin-block-start: auto !important;
+    margin-block-end: auto !important;
 }
-.menuCont li {
-    height: 25%;
-    color: white;
-    position: relative;
+#menusito ul li{
+    float: left;
+    width: 20%;
+    text-align: center;
 }
-.menuCont li:hover{
-    cursor: pointer;
-}
-.textoItemMenu{
-    width: 100%;
-    height: 25px;
-    margin: 2px;
-    box-sizing: border-box;
-}
-.menuCont li .barraCortina{
-    position: absolute;
-    background-color: black;
-    width: 100%;
-    height: 25px;
-    transition: all 1s;
-    border-radius: 2px;
-}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: gray;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+  .material-icons:hover{
+      cursor: pointer;
+  }

@@ -1,18 +1,13 @@
-let  iconbarras = document.getElementById("iconBarras")
-let  lineasDentrodeiconBarras = iconbarras.children
 let contMenu  = document.getElementById("contMenu")
 let contMenuUl = document.getElementsByClassName("menuCont")
 let barrasCortina = document.getElementsByClassName("barraCortina")
 let lstcontenedoreImagenes = document.getElementsByClassName("envol-img")
-let lstItemsMenu = document.getElementsByClassName("textoItemMenu")
+let lstItemsMenu = document.getElementsByClassName("material-icons")
 let contenido = document.getElementsByClassName("children")
 let estadoActivoMenu = false; 
 let CantidadClicksElemento = 1 ;
 const urlCapturasTrabajo = "./imagenes/capturas-portafolio/trabajo/"
 const urlCapturasAcademicos = "./imagenes/capturas-portafolio/academico/"
-
-
-
 
 let hablidaddes = {
     generales:{frondEnd: 47,backEnd:65,android:40,descktop:35., ia:5,sql:40},
@@ -46,8 +41,6 @@ var chartOptions = {
                     }
                 }
             };
-/**/
-
 
 let JsonSobreMi = {
     titulo:"Sobre mi",
@@ -73,7 +66,7 @@ let JsonSobreMi = {
         }
     ]
 }
-/*<ul><li><span class='nomHablidadGeneral'>Frond-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.frondEnd+"%'></span></span></li><li> <span class='nomHablidadGeneral'>Back-End</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.backEnd+"%'></span></span></li><li><span class='nomHablidadGeneral'> Android(Java)</span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.android+"%'></span></span></li><li><span class='nomHablidadGeneral'> Desktop(VB .NET) </span><span class='cont-med-habilidad'><span style='width:"+hablidaddes.generales.descktop+"%'></span></span></li></ul> */
+
 let JsonInicio = {
     titulo:"Inicio",
     Contenido:[
@@ -155,28 +148,33 @@ let JsonPortaFolio = {
         }
     ]
 }
-iconbarras.addEventListener("click",showMenu)
 
 window.addEventListener('DOMContentLoaded',function(){
     mover()
     llenaContenido(JsonInicio)
-   
 })
 
-
+let btnPortafolio = document.getElementById("btnPortafolio")
+btnPortafolio.addEventListener('click',function(){
+    llenaContenido(JsonPortaFolio)
+})
 
 function mover(){
     for( let i=0; i< lstItemsMenu.length; i++ ){
         lstItemsMenu[i].addEventListener('click',function(){
             let altoFirst  = lstItemsMenu[0].style.marginTop
             let Objt = DevuelveAltoAndPosicion(this)
+            for(let i =0 ; i < lstItemsMenu.length;i++){
+                lstItemsMenu[i].style.color = "grey"
+            }
+            this.style.color = "#1a73e8";
             let altoSelecionado =  Objt.Alto
-                if(isNaN(parseInt(altoFirst) * -1)){
+                if(isNaN(parseInt(altoFirst) * - 1)){
                     lstcontenedoreImagenes[0].style.marginTop="-" + altoSelecionado
                 }else{
-                    lstcontenedoreImagenes[0].style.marginTop="-" +  (   (parseInt( altoFirst ) * - 1)  + (altoSelecionado * 1) )   
+                    lstcontenedoreImagenes[0].style.marginTop="-" +  ((parseInt( altoFirst ) * - 1)  + (altoSelecionado * 1))   
                 }
-                showMenu()
+                //showMenu()
                 switch (Objt.Indice){
                     case 0:
                             llenaContenido(JsonInicio)
@@ -194,7 +192,7 @@ function mover(){
                             llenaContenido(JsonPortaFolio)
                         break;
                     default:
-                    console.error("Indicie no econtrado") 
+                            console.error("Indicie no econtrado") 
                         break;   
                 }
                 CantidadClicksElemento += 1
@@ -202,49 +200,6 @@ function mover(){
     }
 }
 
-function showMenu(){
-    if(!estadoActivoMenu){    
-        lineasDentrodeiconBarras[0].style.transform = "rotate(45deg)"
-        lineasDentrodeiconBarras[0].style.top="0px"
-        lineasDentrodeiconBarras[0].style.backgroundColor="white"  
-        lineasDentrodeiconBarras[1].style.transform = "rotate(-45deg)"
-        lineasDentrodeiconBarras[1].style.top="0px"
-        lineasDentrodeiconBarras[1].style.backgroundColor="white"
-        contMenu.style.width = "100%"
-        contMenu.style.backgroundColor ="rgba(0,0,0,0.5)"
-        contMenuUl[0].style.marginLeft="0%"       
-        estadoActivoMenu = true
-        setTimeout(function(){
-            for( let i = 0 ; i < barrasCortina.length ; i++){
-                let tiempo =(i%2) == 1 ? i*50:i*100
-                setTimeout(function(){
-                    barrasCortina[i].style.width = "0%"
-                },tiempo )
-                
-            }
-        },500)
-    }else{
-        
-        lineasDentrodeiconBarras[0].style.transform = "rotate(0deg)"
-        lineasDentrodeiconBarras[0].style.top="2px"
-        lineasDentrodeiconBarras[0].style.backgroundColor="black"  
-        lineasDentrodeiconBarras[1].style.transform = "rotate(0deg)"
-        lineasDentrodeiconBarras[1].style.top="6px"
-        lineasDentrodeiconBarras[1].style.backgroundColor="black"  
-        contMenu.style.width = "100px"
-        contMenu.style.backgroundColor ="transparent"
-        estadoActivoMenu = false
-        contMenuUl[0].style.marginLeft="-110%"
-        setTimeout(function(){
-            for(let i = 0 ; i < barrasCortina.length ; i++){
-                
-                barrasCortina[i].style.width = "100%"
-                
-            }
-        },500)
-        
-    }
-}
 
 
 function DevuelvePosicion( nodeList , elementoABuscar){
@@ -268,6 +223,7 @@ function DevuelveAltoAndPosicion(item){
     }
     return {Alto :Alto,Indice:indice}
 }
+
 function llenaContenido(Json){
     
     if(contenido[1].hasChildNodes()){
