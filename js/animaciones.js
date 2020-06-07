@@ -152,6 +152,7 @@ let JsonPortaFolio = {
 window.addEventListener('DOMContentLoaded',function(){
     mover()
     llenaContenido(JsonInicio)
+    console.log(window.location.search)
 })
 
 let btnPortafolio = document.getElementById("btnPortafolio")
@@ -291,7 +292,7 @@ function ItemParalistaDeHabilidades(LP){
 function retornaItemsPortafolio(arreglo){
     let items =""
     for(i =0 ; i<arreglo.length;i++){
-        items +="<div class='Captura'> <img src='"+arreglo[i].urlCaptura+"'><span>"+arreglo[i].Descripcion+"</span> </div> " 
+        items +="<div class='Captura'> <img loading='lazy' src='"+arreglo[i].urlCaptura+"'><span>"+arreglo[i].Descripcion+"</span> </div> " 
        
     }
     return items
