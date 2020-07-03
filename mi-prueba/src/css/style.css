@@ -1,0 +1,32 @@
+@import './footer.css';
+@import './main.css';
+html,body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+h2{
+    text-align: center;
+}
+h1,h2,h3,h4{
+    font-weight: 800 !important;
+}
+#logo{
+    display: block;
+    max-width: 280px;
+}
+header{
+    padding: 10px;
+}
+p{
+    text-align: justify;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+.container{
+    max-width: 1920px;
+    margin: auto;
+}
+.padding-45px{
+    padding: 45px;
+}
