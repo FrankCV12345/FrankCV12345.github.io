@@ -120,7 +120,7 @@ let JsonCapturasPortafolio = {
     trabajos:
     [   
         {
-        urlCaptura:urlCapturasTrabajo+"traduciendoElDerecho.PNG",
+        urlCaptura:urlCapturasTrabajo+"traduciendoElDerecho.png",
         Descripcion:"<a target='_blank' href='https://traduciendoelderecho.github.io/'>Traduciendo el Derecho </a> , Es un sitio web  orientado a personas interesada en conocer temas sobre Derecho, Esta desarrollado con JS y Java para hacer la conversion de las publicaciones en word a formato JSON."
         } ,
         {urlCaptura:urlCapturasTrabajo+"medicamentos-esenciales.png",Descripcion:"<b>Aplicativo para Medicamentos Esenciales</b> Este es un aplicativo web desarrollado en .NET( C# ) con JQuery , este fue desarrollado en respuesta a la Resolución Ministerial N° 1097-2019-MINSA, El objetivo de este aplicativo es identificar las farmacias o boticas privadas que tienen estos medicamentos, se pueden aplicar algunos filtros por Departamento, provincia o distrito."},
