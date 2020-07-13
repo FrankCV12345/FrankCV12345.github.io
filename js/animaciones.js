@@ -118,12 +118,16 @@ let JsonContacto = {
 }
 let JsonCapturasPortafolio = {
     trabajos:
-    [
+    [   
+        {
+        urlCaptura:urlCapturasTrabajo+"traduciendoElDerecho.PNG",
+        Descripcion:"<a target='_blank' href='https://traduciendoelderecho.github.io/'>Traduciendo el Derecho </a> , Es un sitio web  orientado a personas interesada en conocer temas sobre Derecho, Esta desarrollado con JS y Java para hacer la conversion de las publicaciones en word a formato JSON."
+        } ,
         {urlCaptura:urlCapturasTrabajo+"medicamentos-esenciales.png",Descripcion:"<b>Aplicativo para Medicamentos Esenciales</b> Este es un aplicativo web desarrollado en .NET( C# ) con JQuery , este fue desarrollado en respuesta a la Resolución Ministerial N° 1097-2019-MINSA, El objetivo de este aplicativo es identificar las farmacias o boticas privadas que tienen estos medicamentos, se pueden aplicar algunos filtros por Departamento, provincia o distrito."},
         {urlCaptura:urlCapturasTrabajo+"capturavistacontrolFER.jpg",Descripcion:"<b>App de control para Robot</b>, este fue un  proyecto de un app android y una serie de aplicaciones de escritorio las cuales en conjunto sirven para la transmisión de audio y video  para la pc del robot , además de esto el App envía órdenes de movimiento a la pc y la pc al arduino . Las tecnologías que use fue java desktop , java en android, php(para hacer un login) <a href='https://drive.google.com/open?id=115PAVWLudRaWyW-tye8C0_w7t7jlM9NO' target='_blank'>Video demo</a>."},
         {urlCaptura:urlCapturasTrabajo+"captura-lista-cotizaciones-Plataformapraco.png",Descripcion:"<b>Plataforma praco</b> es un sistema web en el cual se puede generar cotizaciones , ordenes de compra  y cartas  de garantía para producto. Este fue desarrollado con laravel 5.5 y VueJS en este caso yo me encargue del API Rest y de darle mantenimiento al FrontEnd."},
         {urlCaptura:urlCapturasTrabajo+"STACK-MANAGER.PNG",Descripcion:"<b>PICK </b>, es un sistema desktop que sirve para tratar archivos CSV los cuales luego serán usados para hacer circuitos impresos, este proyecto está desarrollado en VB sobre el framework .NET."},
-        {urlCaptura:urlCapturasTrabajo+"modifica-ambiente-SRD.PNG",Descripcion:"<b>SRD</b> , es  un sistema web para registrar datos de ambientes en edificios para luego ser analizados . Este proyecto fue desarrollado con VueJS y firebase."}        
+        {urlCaptura:urlCapturasTrabajo+"modifica-ambiente-SRD.PNG",Descripcion:"<b>SRD</b> , es  un sistema web para registrar datos de ambientes en edificios para luego ser analizados . Este proyecto fue desarrollado con VueJS y firebase."}   
     ],
     academicos:
     [   {urlCaptura:urlCapturasAcademicos+"web_sga.png",Descripcion:"<b> SGA WEB</b> Es un proyecto desarrollado con VueJs, el cual consume un API Rest desarrollado en Spring framework(java) y la BD fue desarrollada en SQL SERVER, Este web sirve para que los roles de administrado, secretaria y profesor puede llevar acabo algunas de sus actividades por ejemplo ingresar notas de alumnos , el administrador puede crear nuevas secciones y la secretaria puede procesar soliciudes de alumnos. "},
