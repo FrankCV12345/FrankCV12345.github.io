@@ -10,8 +10,9 @@ const getHtmlItemLI = (LP) => "<li><span class='nomHablidad'>"+LP.toUpperCase()+
 
 
 let hablidaddes = {
-    generales:{frondEnd: 47,backEnd:70,android:40,descktop:35., ia:5,sql:40},
-    detallado:{java:65,php:40,vb:30,js:50,html:50,css:50,mySql:50,sqlServer:40,NET:35,laravel:40,jQuery:40,git:30,VueJs:40,linux:30,Android:35,bootstrap:50,Vuetify:40,Spring:50,Dart:10,Flutter:10}
+    generales:{frondEnd: 47,backEnd:80,android:30,descktop:35,ia:5,sql:40},
+    detallado:{java:80,php:40,vb:30,js:50,html:50,css:50,mySql:50,sqlServer:50,NET:35,laravel:40,jQuery:40,git:30,VueJs:40,linux:30,Android:35,
+        bootstrap:50,Vuetify:40,Spring:70,Azure:30,Agile:80,TDD:40}
 }
 
 /*Habilidades parametros para grafico radar*/
@@ -62,10 +63,14 @@ let JsonSobreMi = {
         },
         {
             pregunta:"Mis habilidades Técnicas",
-            respuesta:"<ul>"+getHtmlItemLI("java")+getHtmlItemLI("Spring")+getHtmlItemLI("php") +getHtmlItemLI("vb")+getHtmlItemLI("js")+getHtmlItemLI("html")+
-            getHtmlItemLI("css")+getHtmlItemLI("mySql")+getHtmlItemLI("sqlServer")+getHtmlItemLI("NET")+getHtmlItemLI("laravel")+getHtmlItemLI("jQuery")+
+            respuesta:"<ul>"+getHtmlItemLI("java")+getHtmlItemLI("Spring")+getHtmlItemLI("sqlServer")+getHtmlItemLI("Azure")+getHtmlItemLI("php") +getHtmlItemLI("vb")+getHtmlItemLI("js")+getHtmlItemLI("html")+
+            getHtmlItemLI("css")+getHtmlItemLI("mySql")+getHtmlItemLI("NET")+getHtmlItemLI("laravel")+getHtmlItemLI("jQuery")+
             getHtmlItemLI("git")+getHtmlItemLI("VueJs")+getHtmlItemLI("linux")+getHtmlItemLI("Android")
-            +getHtmlItemLI("bootstrap")+getHtmlItemLI("Vuetify")+getHtmlItemLI("Dart")+getHtmlItemLI("Flutter")+"</ul>"
+            +getHtmlItemLI("bootstrap")+getHtmlItemLI("Vuetify")+"</ul>"
+        },
+        {
+            pregunta:"Mis Métodos",
+            respuesta:"<ul>"+getHtmlItemLI("Agile")+getHtmlItemLI("TDD")+"</ul>"
         }
     ]
 }
